@@ -1,26 +1,14 @@
-/*  ---------------------------------------------------
-    Template Name: Dreams
-    Description: Dreams wedding template
-    Author: Colorib
-    Author URI: https://colorlib.com/
-    Version: 1.0
-    Created: Colorib
----------------------------------------------------------  */
+
 
 'use strict';
 
 (function ($) {
 
-    /*------------------
-        Preloader
-    --------------------*/
+
     $(window).on('load', function () {
         $(".loader").fadeOut();
         $("#preloder").delay(200).fadeOut("slow");
 
-        /*------------------
-            Portfolio filter
-        --------------------*/
         $('.portfolio__filter li').on('click', function () {
             $('.portfolio__filter li').removeClass('active');
             $(this).addClass('active');
@@ -31,32 +19,23 @@
         }
     });
 
-    /*------------------
-        Background Set
-    --------------------*/
     $('.set-bg').each(function () {
         var bg = $(this).data('setbg');
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
-    //Masonary
+
     $('.work__gallery').masonry({
         itemSelector: '.work__item',
         columnWidth: '.grid-sizer',
         gutter: 10
     });
 
-    /*------------------
-		Navigation
-	--------------------*/
     $(".mobile-menu").slicknav({
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
 
-    /*------------------
-		Hero Slider
-	--------------------*/
     $('.hero__slider').owlCarousel({
         loop: true,
         dots: true,
@@ -79,10 +58,6 @@
             $(this).html(index);
         }
     });
-
-    /*------------------
-        Testimonial Slider
-    --------------------*/
     $(".testimonial__slider").owlCarousel({
         loop: true,
         margin: 0,
@@ -104,10 +79,6 @@
             }
         }
     });
-
-    /*------------------
-        Latest Slider
-    --------------------*/
     $(".latest__slider").owlCarousel({
         loop: true,
         margin: 0,
@@ -130,9 +101,6 @@
         }
     });
 
-    /*------------------
-        Logo Slider
-    --------------------*/
     $(".logo__carousel").owlCarousel({
         loop: true,
         margin: 100,
